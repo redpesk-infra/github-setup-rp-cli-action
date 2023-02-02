@@ -1,4 +1,4 @@
-name: 'setup-redpesk-cli'
+name: 'redpesk-cli set-up'
 description: 'Action that installs and initializes the redpesk command-line (rp-cli) in the runner'
 
 inputs:
