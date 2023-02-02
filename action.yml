@@ -1,0 +1,28 @@
+name: 'setup-redpesk-cli'
+description: 'Action that installs and initializes the redpesk command-line (rp-cli) in the runner'
+
+inputs:
+  factory-url:
+    description: 'URL of the used redpesk factory'
+    required: true
+  factory-token:
+    description: 'Access token needed to connect to the redpesk factory'
+    required: true
+  install-url:
+    description: 'URL where the script that install rp-cli can be downloaded'
+    required: false
+    default: 'https://raw.githubusercontent.com/redpesk-devtools/redpesk-sdk-tools/master/install-redpesk-sdk.sh'
+  factory-name:
+    description: 'Name to give to the redpesk factory used'
+    required: false
+    default: 'my-redpesk-factory'
+
+runs:
+  using: "composite"
+  steps:
+    - run: wget -O - ${{ inputs.install-url }} | bash -s -- --rp-cli --no-recommends
+      shell: bash
+    - run: rp-cli misc add-connection ${{ inputs.factory-name }} --url ${{ inputs.factory-url }} --token ${{ inputs.factory-token }}
+      shell: bash
+    - run: rp-cli misc use ${{ inputs.factory-name }}
+      shell: bash
