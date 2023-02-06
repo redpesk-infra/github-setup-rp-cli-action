@@ -1,5 +1,6 @@
 name: 'redpesk-cli set-up'
 description: 'Action that installs and initializes the redpesk command-line (rp-cli) in the runner'
+author: "IoT.bzh"
 
 inputs:
   factory-url:
@@ -27,3 +28,7 @@ runs:
       shell: bash
     - run: rp-cli misc use ${{ inputs.factory-name }}
       shell: bash
+
+branding:
+  icon: 'package'
+  color: 'red'
