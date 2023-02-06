@@ -15,10 +15,10 @@ Click on the following links for more information about **[redpesk](https://docs
 
 ### Optional Inputs
 
-| Input          | Description                                                | Default value                                                                                        |
-| -------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `install-url`  | URL where the script that install rp-cli can be downloaded | "https://raw.githubusercontent.com/redpesk-devtools/redpesk-sdk-tools/master/install-redpesk-sdk.sh" |
-| `factory-name` | Name to give to the redpesk factory used                   | "my-redpesk-factory"                                                                                 |
+| Input          | Description                                                                                                 | Default value                                                                                        |
+| -------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `install-url`  | URL where the script that install rp-cli can be downloaded, if set to empty string, rp-cli is not installed | "https://raw.githubusercontent.com/redpesk-devtools/redpesk-sdk-tools/master/install-redpesk-sdk.sh" |
+| `factory-name` | Name to give to the redpesk factory used                                                                    | "my-redpesk-factory"                                                                                 |
 
 ### Example
 

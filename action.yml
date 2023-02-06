@@ -22,6 +22,7 @@ runs:
   steps:
     - run: wget -O - ${{ inputs.install-url }} | bash -s -- --rp-cli --no-recommends
       shell: bash
+      if: ${{ inputs.install-url }} != ''
     - run: rp-cli misc add-connection ${{ inputs.factory-name }} --url ${{ inputs.factory-url }} --token ${{ inputs.factory-token }}
       shell: bash
     - run: rp-cli misc use ${{ inputs.factory-name }}
