@@ -29,7 +29,7 @@ env:
     RP_REMOTE_FACTORY_URL: 'https://community-app.redpesk.bzh'
     RP_REMOTE_FACTORY_TOKEN: ${{ secrets.RP_REMOTE_FACTORY_TOKEN }}
 
-uses: redpesk-infra/github-setup-rp-cli-action@v1
+uses: redpesk-infra/github-setup-rp-cli-action@v2
 with:
     factory-url: "$RP_REMOTE_FACTORY_URL"
     factory-token: "$RP_REMOTE_FACTORY_TOKEN"
